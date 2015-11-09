@@ -1,11 +1,5 @@
 ﻿using ConfigWorker.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 
 namespace ConfigWorker.Stores
 {
@@ -32,7 +26,7 @@ namespace ConfigWorker.Stores
             Configuration configuration = null;
             try
             {
-                if ((HttpContext.Current != null) && (!HttpContext.Current.Request.PhysicalPath.Equals(string.Empty)))
+                if (System.Web.HttpContext.Current != null)
                 { configuration = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~"); }
                 else
                 { configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None); }
