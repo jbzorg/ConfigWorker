@@ -4,7 +4,7 @@ using System.Configuration;
 namespace ConfigWorker.Stores
 {
     /// <summary>
-    /// Default implementation of IStore
+    /// Default implementation of IStore for classic desktop apps
     /// </summary>
     class DefaultStore : IStore
     {
@@ -26,18 +26,11 @@ namespace ConfigWorker.Stores
             Configuration configuration = null;
             try
             {
-                if (System.Web.HttpContext.Current != null)
-                { configuration = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~"); }
-                else
-                { configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None); }
-
+                configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 configuration.AppSettings.Settings.Add(name, value);
             }
             finally
-            {
-                if (configuration != null)
-                { configuration.Save(); }
-            }
+            { configuration?.Save(); }
             ConfigurationManager.RefreshSection("appSettings");
         }
     }

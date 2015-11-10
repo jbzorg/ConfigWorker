@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigWorker", "ConfigWorker\ConfigWorker.csproj", "{F9E34649-D425-47C9-8595-477A8E38FE17}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigWorker.Tests", "ConfigWorker.Tests\ConfigWorker.Tests.csproj", "{76F86E58-79E5-4DBA-8FFE-6380BB6CE723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigWorker.Web", "ConfigWorker.Web\ConfigWorker.Web.csproj", "{B964D559-1791-49B8-94EC-4EFB5EA88530}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{76F86E58-79E5-4DBA-8FFE-6380BB6CE723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76F86E58-79E5-4DBA-8FFE-6380BB6CE723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76F86E58-79E5-4DBA-8FFE-6380BB6CE723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B964D559-1791-49B8-94EC-4EFB5EA88530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B964D559-1791-49B8-94EC-4EFB5EA88530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B964D559-1791-49B8-94EC-4EFB5EA88530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B964D559-1791-49B8-94EC-4EFB5EA88530}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

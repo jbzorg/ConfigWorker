@@ -4,10 +4,6 @@ using ConfigWorker.Interfaces;
 using ConfigWorker.Serializers;
 using ConfigWorker.Stores;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConfigWorker
 {
@@ -56,7 +52,7 @@ namespace ConfigWorker
             T result;
             try
             { result = deserializer(rawData); }
-            catch (Exception ex)
+            catch (Exception)
             { result = defaultValue; }
             return result;
         }
